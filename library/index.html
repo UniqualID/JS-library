@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<header>
+		<h1>Your Local Library</h1>
+	</header>
+	<button class="startbutton" id="add-book">+ Add New Book</button>
+	<button class="startbutton" id="add-random-book">+ Add Random Book</button>
+	<dialog>
+		<form action="#" id="form">
+			<ul>
+				<li>
+					<label for="title">Title</label>
+					<input type="text" id="title" name="author">
+				</li>
+				<li>
+					<label for="author">Author</label>
+					<input type="text" id="author" name="author">
+				</li>
+				<li>
+					<label for="pages">Pages</label>
+					<input type="number" id="pages" name="pages" min="1">
+				</li>
+				<li>
+					<label for="read">Read?</label>
+					<input type="checkbox" id="read" name="read">
+				</li>
+			</ul>
+			<div class="buttonwrapper">
+				<button type="reset">Reset</button>
+				<button type="submit" id="submit">Submit</button>
+				<button type="button" id="cancel">Cancel</button>
+			</div>
+		</form>	
+	</dialog>
+	<main>
+	</main>
+	<footer>
+		<p>Copyright @ 2025 UniqualID</p>
+	</footer>	
+	<script></script>
+</body>
+
+</html>

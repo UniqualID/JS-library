@@ -1,0 +1,194 @@
+/* * {
+	outline: 1px solid red;
+} */
+:root {
+	--blue: #1992d4;
+	--grey: #e2e8f0;
+	--grey-text: #636363;
+	--orange: #f2b049;
+	--body-max-width: 1500px;
+	--shadow: 0px 1px 5px rgba(0, 0, 0, .16);
+	--corner-radius: 9px;
+	font-family: roboto;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--grey)
+}
+
+header {
+	background-color: white;
+	min-height: 100px;
+	box-shadow: var(--shadow);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Gentium Book Plus", serif;
+	font-size: 48px;
+	margin-bottom: 10px;
+}
+
+.startbutton {
+	appearance: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 240px;
+	height: 50px;
+	border: None;
+	background-color: var(--grey);
+	border-radius: var(--corner-radius);
+	font-size: 20px;
+	font-weight: 500;
+	padding: 5px 10px;
+	transition: 0.3s;
+}
+
+.startbutton:hover {
+	filter: brightness(90%)
+}
+
+main {
+	flex: 1;
+	width: min(var(--body-max-width), 100%);
+	margin: 15px auto;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px
+}
+
+.book {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	border-radius: var(--corner-radius);
+	background-color: white;
+	text-align: center;
+	box-shadow: var(--shadow);
+	position: relative;
+	padding: 20px;
+	width: 350px;
+	height: 300px
+}
+
+.book button {
+	border: None;
+	/* background-color: white */
+	margin: 0 auto;
+	width: 150px;
+	height: 50px;
+	border-radius: var(--corner-radius);
+	transition: 0.3s;
+	font-weight: 500;
+}
+
+.book button:hover {
+	background-color: var(--blue)
+}
+
+.book.isread::before{
+	position: absolute;
+	top:0;
+	right: 10px;
+	content: "✔";
+	color: green;
+	font-size: 32px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	color: var(--grey-text);
+	height: 50px;
+}
+
+dialog {
+	margin: auto auto;
+	border: None;
+	border-radius: var(--corner-radius);
+	padding: 30px;
+	font-size: 20px;
+}
+
+.buttonwrapper {
+	display: flex;
+	gap: 5px
+}
+
+.buttonwrapper button {
+	flex: 1;
+	border-radius: var(--corner-radius);
+	border: None;
+	padding: 5px 10px;
+}
+
+.buttonwrapper button:hover {
+	background-color: #ccc;
+}
+
+
+dialog ul {
+	list-style-type: None;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+dialog ul li {
+	display: flex;
+	align-items: center;
+	gap: 20px
+}
+
+dialog label {
+	width: 80px;
+	text-align: right;
+}
+
+dialog input[type="checkbox"] {
+	appearance: None;
+	cursor: pointer;
+	position: relative;
+	width: 50px;
+	height: 30px;
+	border-radius: 25px;
+	background-color: #ccc;
+	transition: background .3s;
+}
+
+dialog input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: white;
+    transition: left .3s;
+}
+
+dialog input[type="checkbox"]:checked {
+    background-color: rgb(141, 221, 141);
+}
+
+dialog input[type="checkbox"]:checked::after {
+	left: 70%;
+}
+
+dialog::backdrop {
+	background-color: rgba(0,0,0,0.7);
+}
